@@ -1,6 +1,7 @@
 import React from "react";
 import LandingPage from "./laningPage/LandingPage";
 import Header from "./shared/header/Header";
+import Footer from "./shared/footer/Footer";
 import About from "./aboutPage/About";
 import LogIn from "./logInPage/LogIn";
 
@@ -16,6 +17,7 @@ function App() {
           <Route path="/About" component={About} />
           <Route path="/LogIn" component={LogIn} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
