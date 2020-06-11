@@ -6,10 +6,9 @@ import MailOutlineOutlinedIcon from "@material-ui/icons/MailOutlineOutlined";
 import RoomOutlinedIcon from "@material-ui/icons/RoomOutlined";
 
 const Wrapper = styled.div`
-  height: 30vh;
+  height: 500px;
   background-color: ${(props) => props.theme.blue};
   position: fixed;
-  padding: 10px 10px 0px 10px;
   bottom: 0;
   width: 100%;
   display: inline-grid;
@@ -20,29 +19,49 @@ const Items = styled.div`
   display: flex;
 `;
 
-const ContactItems = styled.div`
-  width: 50%;
+const ContactWrapper = styled.div`
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+`;
+
+const Text = styled.p`
+  color: ${(props) => props.theme.white};
+  fontsize: 10rem;
+`;
+
+const ContactItems = styled.div`
+  text-align: center;
 `;
 
 const Footer = () => {
   return (
     <Wrapper>
       <Items>
-        <ContactItems>
-          <PhoneIphoneIcon fontSize="large" />
-        </ContactItems>
-        <ContactItems>
-          <MailOutlineOutlinedIcon fontSize="large" />
-        </ContactItems>
-        <ContactItems>
-          <RoomOutlinedIcon fontSize="large" />
-        </ContactItems>
+        <ContactWrapper>
+          <ContactItems>
+            <PhoneIphoneIcon fontSize="large" />
+            <Text> +46 * ** ** ** **</Text>
+          </ContactItems>
+          <ContactItems>
+            <MailOutlineOutlinedIcon fontSize="large" />
+            <Text> Earnit@gmail.com </Text>
+          </ContactItems>
+          <ContactItems>
+            <RoomOutlinedIcon fontSize="large" />
+            <Text> Syster Edstrids gata 11</Text>
+          </ContactItems>
+        </ContactWrapper>
       </Items>
-      <Items></Items>
-      <Items></Items>
+      <Items>
+        <ContactItems>
+          <p> About</p>
+        </ContactItems>
+        <div></div>
+        <div></div>
+      </Items>
+      <Items> </Items>
     </Wrapper>
   );
 };
